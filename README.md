@@ -11,10 +11,20 @@ This project is open-ended. After you finish the requirement set listed below, s
 
 Remember: it's more important to deliver a working well-tested product than it is to have flashy but incomplete features.
 
+API
+GET list of songs from API
+GET individual song from API
+
+
 Requirements
 You must implement each of these requirements in your application:
 
-Your user can Play, Skip, Pause,and go back on their playlist.
+User can:
+•play
+•pause
+•skip
+•return to music list
+
 Your user can Save their favorite songs on a separate file
 Use waht you have learned on UI to perfect the 2nd activity
 allow user to upload their own music
@@ -25,6 +35,9 @@ Once music is selected from playlist user are taken to another activity that all
 Extra Requirements
 After finishing your required app elements, you are not finished with your project. We expect you to implement at least three extra features. You're at liberty to choose the features you'd like to implement.
 These extra requirements (or others you come up with on your own) are not necessarily things you have learned throughout the course. Treat them as if your client adds a feature at a late date that you don't already know how to implement. How will you go about learning how to bring that feature into your product?
+
+Allow user to create new playlist and share them through a link.
+User can add music to theri playlist from their phone or web.
 
 A few ideas are as follows:
 
@@ -52,3 +65,5 @@ Design your interfaces and schedule your time carefully. Keep your scope narrow 
 Thoroughly test and debug your application well before it's time to present it. Stick to your schedule and make sure that testing and refinement is part of that schedule.
 
 Remember: Simpler and working is better than fancy and unfinished.
+
+**This app will be better than the competitive because they will be no add and unlimited access to music through the app and the web.
