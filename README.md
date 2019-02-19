@@ -70,4 +70,5 @@ Remember: Simpler and working is better than fancy and unfinished.
 
 **This app will be better than the competitive because they will be no ad and unlimited access to music through the app and the web.
 
+Pocket cast has a good UI
 
