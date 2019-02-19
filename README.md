@@ -12,8 +12,9 @@ This project is open-ended. After you finish the requirement set listed below, s
 Remember: it's more important to deliver a working well-tested product than it is to have flashy but incomplete features.
 
 API
-GET list of songs from API
-GET individual song from API
+GET list of songs from API https://rapidapi.com/volodimir.kudriachenko/api/iTunes
+GET individual song from API https://rapidapi.com/dimas/api/SpotifyPublicAPI
+LYRIC API https://rapidapi.com/musixmatch.com/api/musixmatch
 
 
 Requirements
