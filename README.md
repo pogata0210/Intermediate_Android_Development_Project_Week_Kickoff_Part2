@@ -1,4 +1,5 @@
 # Intermediate_Android_Development_Project_Week_Kickoff_Part2
+Advences Music Player
 
 Your project spans an entire week. Your project instructions this week are closer to a Sprint Challenge than an afternoon Challenge in that they are sparse.
 
@@ -13,36 +14,26 @@ Remember: it's more important to deliver a working well-tested product than it i
 Requirements
 You must implement each of these requirements in your application:
 
-Your model processes records that represent a book volume. Each record contains the following properties at a minimum:
-A title (sourced from Google's API)
-An image representing the book cover (sourced from Google's API) that is scaled down to a reasonable size so it does not take up too much space.
-A String-based book review sourced from your application user
-A property that represents whether or not your user has read this book.
-Your user can search for books with a text query. Matching books are displayed to the user.
-For more information on performing a search, go here
+Your user can Play, Skip, Pause,and go back on their playlist.
+Your user can Save their favorite songs on a separate file
+Use waht you have learned on UI to perfect the 2nd activity
+allow user to upload their own music
+play music from the web
 
-Your user can tag books to categorize them in "bookshelves". A single book may exist in more than one shelf. For example, your user might have a "Favorites" bookshelf as well as a "Thriller-Suspense" one.
-Your user can view a list of all their bookshelves.
-The book records including review, etc, are stored in your SQLite Database and are read into the app whenever the user launches your app.
-Your user can insert, update, and delete books in their bookshelf or move them from one bookshelf to another. This information is stored on their behalf at SQLite Database and is read in whenever the user launches your application.
+Once music is selected from playlist user are taken to another activity that allows them to control play, skip, paus buttons.
+
 Extra Requirements
 After finishing your required app elements, you are not finished with your project. We expect you to implement at least three extra features. You're at liberty to choose the features you'd like to implement.
-
 These extra requirements (or others you come up with on your own) are not necessarily things you have learned throughout the course. Treat them as if your client adds a feature at a late date that you don't already know how to implement. How will you go about learning how to bring that feature into your product?
 
 A few ideas are as follows:
 
-Use firebase to create online storage for the bookshelves (counts as 2 features)
-Allow more than one user to use the same database without conflicting or overwriting each other's data. The same information must be accessible at each launch of the program, so be sure to use good Firebase hygiene.
-You can find the instructions for setting up a firebase database that iOS uses in this repo
-When you mark a book as read, add it also to a pre-made "Already read" bookshelf. Books later marked as unread must be removed from this bookshelf.
-Allow users to select a light or a dark theme
-Share a link to a book (there is one to the Google Play store in the JSON), or your review of it to Twitter, Facebook, etc.
-Create and display a QRCode with a link to the book. Friends with mobile phones can read the QRCode and follow your link.
-Find the book on Amazon and open it in the Amazon app, or on a web browser.
-Print out your review including an image of the cover.
-Add a button to read out your review using a speech synthesizer.
-Create a "Recently read" or "Recently reviewed" screen that uses the modification time for the "didRead" or "review" properties to select items to showcase.
+Use different UI and graphic to perfect the app
+Look up at the competitive similer app to see what their are doing great
+add login information for user
+share musics on social media
+
+
 Commit History
 Commit your code often and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and anyone you're working with.
 
