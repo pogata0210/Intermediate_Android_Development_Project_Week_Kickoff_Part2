@@ -26,6 +26,7 @@ User can:
 •skip
 •return to music list
 navigation box
+SQL data base
 
 Your user can Save their favorite songs on a separate file
 Use waht you have learned on UI to perfect the 2nd activity
@@ -68,7 +69,21 @@ Thoroughly test and debug your application well before it's time to present it. 
 
 Remember: Simpler and working is better than fancy and unfinished.
 
-**This app will be better than the competitive because they will be no ad and unlimited access to music through the app and the web.
+**This app will be better than the competitives because they will be no ad and unlimited access to music through the app and the web.
+For cloud service is paid
 
+Note
 Pocket cast has a good UI
+If music needs to be played in the background service needs to be used.
+https://developer.android.com/guide/topics/media/
+use API for meta data
+The room database
+Room Persistence Library  |  Android Developers
+https://developer.android.com/topic/libraries/architecture/room
+
+Page adapter
+to slide 
+
+which API to use and what to do with it?
+
 
