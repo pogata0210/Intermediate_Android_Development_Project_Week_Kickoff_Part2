@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
             case R.id.play_button:
+
                 if (mediaPlayer == null) {
                     mediaPlayer = mediaPlayer.create(getApplicationContext(), R.raw.im_yours);
                     mediaPlayer.start();
-                }
-                else if(!mediaPlayer.isPlaying()) {
+                } else if(!mediaPlayer.isPlaying()) {
                     mediaPlayer.seekTo(pausePosition);
+                    mediaPlayer.start();
 
                 }
                 break;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(mediaPlayer==null) {
                     mediaPlayer.pause();
                     pausePosition=mediaPlayer.getCurrentPosition();
-                    mediaPlayer.start();
+
                 }
                 break;
 
