@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.pause_button:
-                if(mediaPlayer==null) {
+                if(mediaPlayer!=null) {
                     mediaPlayer.pause();
                     pausePosition=mediaPlayer.getCurrentPosition();
 
