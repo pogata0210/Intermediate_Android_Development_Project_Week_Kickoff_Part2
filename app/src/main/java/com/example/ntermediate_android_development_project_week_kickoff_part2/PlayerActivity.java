@@ -163,6 +163,7 @@ public class PlayerActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
+
             mediaPlayer.stop();
             mediaPlayer.release();
 

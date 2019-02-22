@@ -6,14 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:padding="10dp"
+
     android:background="@color/colorPrimary">
 
 
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/mySongListView">
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_bar"
+            
+            />
+    
 
-    </ListView>
+
+
+        <ListView
+            android:id="@+id/mySongListView"
+            android:layout_width="390dp"
+            android:layout_height="663dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
 </RelativeLayout>
