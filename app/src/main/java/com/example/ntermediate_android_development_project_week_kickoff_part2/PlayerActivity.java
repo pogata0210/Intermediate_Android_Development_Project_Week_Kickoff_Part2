@@ -1,12 +1,14 @@
 package com.example.ntermediate_android_development_project_week_kickoff_part2;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -39,6 +41,10 @@ public class PlayerActivity extends AppCompatActivity {
 
         songTextLabel = (TextView) findViewById(R.id.songNameTextView);
         songSeekbar = (SeekBar) findViewById(R.id.seekBar);
+
+        getSupportActionBar().setTitle("Now Playing");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
         updateseekBar = new Thread(){
@@ -90,6 +96,11 @@ public class PlayerActivity extends AppCompatActivity {
 
         mediaPlayer = MediaPlayer.create(getApplicationContext(),u);
         songSeekbar.setMax(mediaPlayer.getDuration());
+
+        updateseekBar.start();
+
+        songSeekbar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
+        songSeekbar.getThumb().setColorFilter(getResources().getColor(R.color.colorAccent),PorterDuff.Mode.SRC_IN);
 
         songSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -166,5 +177,14 @@ public class PlayerActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
