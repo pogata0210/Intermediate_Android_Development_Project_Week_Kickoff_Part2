@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity  {
     ListView myListViewForSongs;
     String[] items;
     EditText searchBar;
+
 
 
 
@@ -74,7 +76,9 @@ public class MainActivity extends AppCompatActivity  {
         }); **/
 
 
-        myListViewForSongs = (ListView) findViewById(R.id.mySongListView);
+      myListViewForSongs = (ListView) findViewById(R.id.mySongListView);
+
+     //   myListViewForSongs = (RecyclerView) findViewById(R.id.mySongListView);
 
 
 
