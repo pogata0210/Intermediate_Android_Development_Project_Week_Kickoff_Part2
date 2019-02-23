@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,7 +17,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -34,7 +39,14 @@ public class MainActivity extends AppCompatActivity  {
 
     ListView myListViewForSongs;
     String[] items;
-    EditText searchBar;
+    EditText searchBar, addBar;
+   // Spinner spinerGenres;
+    Button addButton;
+
+    DatabaseReference databaseArtist;
+
+
+
 
 
 
@@ -75,8 +87,19 @@ public class MainActivity extends AppCompatActivity  {
             }
         }); **/
 
+     //  databaseArtist = FirebaseDatabase.getInstance().getReference("artists");
+
+
+
 
       myListViewForSongs = (ListView) findViewById(R.id.mySongListView);
+
+    //  addBar = (EditText) findViewById(R.id.add_bar);
+
+      addButton = (Button) findViewById(R.id.add_button);
+
+     // spinerGenres = (Spinner) findViewById(R.id.spinnerGenres);
+
 
      //   myListViewForSongs = (RecyclerView) findViewById(R.id.mySongListView);
 
@@ -151,36 +174,56 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
-    void display(){
+    void display() {
 
         final ArrayList<File> mySongs = findSong(Environment.getExternalStorageDirectory());
 
         items = new String[mySongs.size()];
 
-        for(int i=0;i<mySongs.size();i++) {
+        for (int i = 0; i < mySongs.size(); i++) {
             items[i] = mySongs.get(i).getName().toString().replace(".mp3", "").replace(".wav", "");
         }
 
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
         myListViewForSongs.setAdapter(myAdapter);
 
-        myListViewForSongs.setOnItemClickListener(new AdapterView.OnItemClickListener()
-
-
-        {
+        myListViewForSongs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
 
                 String songName = myListViewForSongs.getItemAtPosition(i).toString();
 
-                startActivity(new Intent(getApplicationContext(),PlayerActivity.class)
-                .putExtra("songs",mySongs).putExtra("songname", songName)
-                .putExtra("pos",i));
+                startActivity(new Intent(getApplicationContext(), PlayerActivity.class)
+                        .putExtra("songs", mySongs).putExtra("songname", songName)
+                        .putExtra("pos", i));
             }
 
         });
 
+     /**   addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addArtist();
+            }
+        });
 
+    }
+
+    private void addArtist() {
+        String name = addBar.getText().toString().trim();
+      //  String genre = spinerGenres.getSelectedItem().toString();
+
+        if (!TextUtils.isEmpty(name)){
+            String id =  databaseArtist.push().getKey();
+            Artist artist = new Artist (id);
+
+            databaseArtist.child(id).setValue(artist);
+
+            Toast.makeText(this, "Artist added", Toast.LENGTH_LONG).show();
+
+        }else {
+            Toast.makeText(this, "You Should Enter a Name", Toast.LENGTH_LONG).show();
+        } **/
     }
 }
 
